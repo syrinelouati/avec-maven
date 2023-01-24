@@ -18,17 +18,21 @@ import org.json.JSONObject;
  * 
  *
  */
- /**
-  * @author 2 LOUATI Syrine
-  */
+/**
+ * @author 2 LOUATI Syrine
+ */
 /**
  * commentaire test branche
+ * 
+ * ceci est un commentaire 1
+ * ceci est un commentaire 2
  */
 
 public class CallRestWebService {
 
 	public static final String endpoint = "http://ip-api.com/json";
-	//public static final String endpoint = "https://httpbin.org/get";
+
+	// public static final String endpoint = "https://httpbin.org/get";
 	public static void main(String[] args) {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(endpoint);
@@ -39,13 +43,12 @@ public class CallRestWebService {
 			System.out.println("Response as String : " + jsonResponse);
 			JSONObject responseObj = new JSONObject(jsonResponse);
 
-			//ip = responseObj.getString("origin");
+			// ip = responseObj.getString("origin");
 			ip = responseObj.getString("query");
-			System.out.println("ip : " + ip); 
+			System.out.println("ip : " + ip);
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 }
-
