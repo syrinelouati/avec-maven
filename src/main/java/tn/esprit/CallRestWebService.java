@@ -26,6 +26,7 @@ import org.json.JSONObject;
  * 
  * ceci est un commentaire 1
  * ceci est un commentaire 2
+ * * ceci est un commentaire 3 newbranch
  */
 
 public class CallRestWebService {
